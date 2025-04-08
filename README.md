@@ -13,18 +13,43 @@ A modern web application for collecting and managing user feedback. Built with a
 ## Tech Stack
 
 **Frontend:**
-- React (with Vite or Next.js)
+- React (with Vite )
 - Tailwind CSS
 
 
 **Backend:**
 - Node.js + Express
-- MongoDB or another database 
+- MongoDB 
 
 ## Getting Started
 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/feedback-collector.git
+git clone https://github.com/Karan09823/Feedback-collector.git
 cd feedback-collector
+
+```
+
+## For adding admin
+
+  const hashedPassword = await bcrypt.hash("xyz123", 10);
+
+  const admin = new Admin({
+    fullName: "abc",
+    email: "abc@gmail.com",
+    password: hashedPassword,
+    role: "admin",
+  });
+
+  try {
+    await admin.save();
+    console.log("✅ Admin created successfully");
+  } catch (error) {
+    console.error("❌ Error creating admin:", error.message);
+  } finally {
+    mongoose.connection.close();
+  }
+};
+
+run node createAdmin.js 
