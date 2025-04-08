@@ -15,7 +15,7 @@ app.use(cookieParser());
 // CORS config
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://karansahu-feedbackcollector.netlify.app",
     credentials: true,
   })
 );
